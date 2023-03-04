@@ -32,7 +32,7 @@ import (
 )
 
 func init() {
-	register("stateDiffTracer", newStateDiffTracer)
+	tracers.DefaultDirectory.Register("stateDiffTracer", newStateDiffTracer, false)
 }
 
 type stateDiffMarker string
